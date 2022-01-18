@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^12.1.2",
-    "eslint": "^8.7.0"
+    "eslint": "^8.7.0",
+    "git-precommit-checks": "^3.0.7"
   }
 }
