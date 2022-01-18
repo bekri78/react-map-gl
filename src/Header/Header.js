@@ -1,9 +1,15 @@
 import React from "react";
-export default function Header({ title }) {
+export default function Header() {
   return (
     <>
-      <h1 className="header">{title}</h1>
-      <h3 className="header">Cats</h3>
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Macaron
+      </a>
     </>
   );
 }
