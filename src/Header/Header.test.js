@@ -7,9 +7,3 @@ test("renders   react header", () => {
   const headingElement = screen.getByRole("heading", { name: "Cats" });
   expect(headingElement).toBeInTheDocument();
 });
-
-// test("render  react header", () => {
-//   render(<Header title2="Macarone" />);
-//   const headingElement = screen.getByRole("heading");
-//   expect(headingElement).toBeInTheDocument();
-// });
