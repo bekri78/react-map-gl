@@ -1,11 +1,9 @@
-describe("form sunmission", () => {
+describe("map init", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
   });
-  it("doit envoyer le formulaire", () => {
-    cy.get("#text").type("test");
-    cy.get("#submitted").should("not.exist");
-    cy.get("form").submit();
-    cy.get("#submitted").should("exist");
+  it("check map is load", () => {
+    cy.get('div')
+    .should('have.class', 'mapboxgl-map')
   });
 });
