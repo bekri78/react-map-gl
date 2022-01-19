@@ -9,6 +9,7 @@
     "@types/node": "^16.11.20",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@types/sinonjs__fake-timers": "^8.1.1",
     "husky": "^7.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,15 +22,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "eslint src",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "prettier:fix": "prettier --write",
     "prettier:check": "prettier --check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:cypress/recommended"
     ]
   },
   "browserslist": {
@@ -45,10 +48,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
+    "@cypress/react": "^5.12.1",
+    "@cypress/webpack-dev-server": "^1.8.0",
     "@testing-library/react": "^12.1.2",
+    "cypress": "^9.3.1",
     "eslint": "^8.7.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "git-precommit-checks": "^3.0.7"
   }
 }
