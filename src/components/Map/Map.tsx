@@ -17,7 +17,7 @@ export default function Map() {
         transitionDuration: Number(500),
     });
     return (
-        <div data-testid="map">
+        <div data-testid="map" className="mapboxgl-map flex justify-center items-center w-full shadow-2xl">
             <MapGL
                 className="shadow-2xl"
                 mapStyle={"mapbox://styles/mapbox/dark-v10"}

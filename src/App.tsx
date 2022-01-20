@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <div className="flex justify-center items-center  flex-col w-full shadow-2xl"  >
+    <div className="flex justify-center items-center  flex-col w-full"  >
       <h1 className="text-blue-450 m-3 font-bold  "> MAP arrondissement</h1>
 
       <Map />
