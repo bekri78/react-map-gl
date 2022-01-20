@@ -10,6 +10,8 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@types/sinonjs__fake-timers": "^8.1.1",
+    "@urbica/react-map-gl-cluster": "^0.2.0",
+    "deck.gl": "^8.6.5",
     "husky": "^7.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
