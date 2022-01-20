@@ -6,7 +6,9 @@ function App() {
 
 
   return (
-    <div style={{ width: "100%", height: "100vh", display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 'auto' }}>
+    <div className="flex justify-center items-center  flex-col w-full shadow-2xl"  >
+      <h1 className="text-blue-450 m-3 font-bold  "> MAP arrondissement</h1>
+
       <Map />
     </div>
   );

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import MapGL from "react-map-gl";
+import MapGL, { Layer, Source } from "react-map-gl";
+import { clusterLayer, clusterCountLayer, unclusteredPointLayer, line } from './Layer';
+
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -15,12 +17,34 @@ export default function Map() {
         transitionDuration: Number(500),
     });
     return (
-        <MapGL
-            mapStyle={"mapbox://styles/mapbox/dark-v10"}
-            mapboxApiAccessToken="pk.eyJ1IjoiYmVrcmk5MyIsImEiOiJja3lpaDZmcnMyZDZlMnhvOG1jeTY2cHJiIn0.v2MfvUiv8Yu4-VS-R5ns3Q"
-            {...viewport}
-            onViewportChange={setViewport}
-        >
-        </MapGL>
+        <div data-testid="map">
+            <MapGL
+                className="shadow-2xl"
+                mapStyle={"mapbox://styles/mapbox/dark-v10"}
+                mapboxApiAccessToken="pk.eyJ1IjoiYmVrcmk5MyIsImEiOiJja3lpaDZmcnMyZDZlMnhvOG1jeTY2cHJiIn0.v2MfvUiv8Yu4-VS-R5ns3Q"
+                {...viewport}
+                onViewportChange={setViewport}
+            >
+                <Source
+                    id="polylineLayer"
+                    type="geojson"
+                    data="/data/arrondissements.geojson"
+                >
+                    <Layer
+                        id="lineLayer"
+                        type="line"
+                        source="my-data"
+                        layout={{
+                            "line-join": "round",
+                            "line-cap": "round",
+                        }}
+                        paint={{
+                            "line-color": "rgba(3, 170, 238, 0.5)",
+                            "line-width": 3,
+                        }}
+                    />
+                </Source>
+            </MapGL>
+        </div>
     );
 }

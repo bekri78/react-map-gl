@@ -4,4 +4,5 @@ import Map from "./Map";
 
 test("render map", () => {
     render(<Map />);
+
 });
