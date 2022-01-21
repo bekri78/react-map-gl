@@ -9,17 +9,17 @@ describe("map init", () => {
 });
 
 
-describe('naviagtion click on map', function() {
+// describe('naviagtion click on map', function() {
 
-  it('click for navigation on the map', function() {
+//   it('click for navigation on the map', function() {
  
-     cy.viewport(1600, 757)
+//      cy.viewport(1600, 757)
   
-     cy.visit('http://localhost:3001/')
+//      cy.visit('http://localhost:3001/')
   
-     cy.get('.flex > .mapboxgl-map > div > div > .overlays').click()
+//      cy.get('.flex > .mapboxgl-map > div > div > .overlays').click()
   
-  })
+//   })
  
- })
+//  })
  
