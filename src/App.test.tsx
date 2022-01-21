@@ -9,3 +9,15 @@ test("render map", async () => {
     expect(findId).toBeInTheDocument();
 
 });
+
+
+test("check map", async () => {
+
+    // render(<Map />)
+    // const findMap = await screen.findByTestId('map')
+    //const { container } = render(<App />)
+    // const button = container.querySelector('.overlays')
+
+    //expect(container.hasClass('.overlays'))
+
+});
