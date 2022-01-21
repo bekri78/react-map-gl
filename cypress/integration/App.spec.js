@@ -1,6 +1,6 @@
 describe("map init", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("http://localhost:3001");
   });
   it("check map is load", () => {
     cy.get('div')
@@ -15,7 +15,7 @@ describe('naviagtion click on map', function() {
  
      cy.viewport(1600, 757)
   
-     cy.visit('http://localhost:3000/')
+     cy.visit('http://localhost:3001/')
   
      cy.get('.flex > .mapboxgl-map > div > div > .overlays').click()
   
