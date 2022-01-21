@@ -1,12 +1,20 @@
-describe("map init", () => {
-  beforeEach(() => {
-    cy.visit("http://localhost:3001");
-  });
-  it("check map is load", () => {
-    cy.get('div')
-    .should('have.class', 'mapboxgl-map')
-  });
-});
+
+
+describe('My First Test', () => {
+  it('Does not do much!', () => {
+    expect(true).to.equal(true)
+  })
+})
+
+// describe("map init", () => {
+//   beforeEach(() => {
+//     cy.visit("http://localhost:3000");
+//   });
+//   it("check map is load", () => {
+//     cy.get('div')
+//     .should('have.class', 'mapboxgl-map')
+//   });
+// });
 
 
 // describe('naviagtion click on map', function() {
