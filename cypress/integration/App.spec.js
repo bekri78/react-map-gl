@@ -1,11 +1,33 @@
-describe("form sunmission", () => {
-  beforeEach(() => {
-    cy.visit("http://localhost:3000");
-  });
-  it("render form", () => {
-    cy.get("#text").type("test");
-    cy.get("#submitted").should("not.exist");
-    cy.get("form").submit();
-    cy.get("#submitted").should("exist");
-  });
-});
+
+
+describe('My First Test', () => {
+  it('Does not do much!', () => {
+    expect(true).to.equal(true)
+  })
+})
+
+// describe("map init", () => {
+//   beforeEach(() => {
+//     cy.visit("http://localhost:3000");
+//   });
+//   it("check map is load", () => {
+//     cy.get('div')
+//     .should('have.class', 'mapboxgl-map')
+//   });
+// });
+
+
+// describe('naviagtion click on map', function() {
+
+//   it('click for navigation on the map', function() {
+ 
+//      cy.viewport(1600, 757)
+  
+//      cy.visit('http://localhost:3001/')
+  
+//      cy.get('.flex > .mapboxgl-map > div > div > .overlays').click()
+  
+//   })
+ 
+//  })
+ 
