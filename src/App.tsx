@@ -11,11 +11,10 @@ function App() {
 
   useEffect(() => {
     const getArrondissement = async () => {
-
-      const response = await axios.get('http://localhost:3000/arrondissementContour')
+      const response = await axios.get(`${process.env.REACT_APP_URL_ARRONDISSEMENT}`)
         .then(function (response) {
           // handle success
-          console.log(response.data.features);
+          console.log('data', response.data.features);
           dispatch(addArrondissement(response.data))
           // je recupère la donnée et dispatch pour rendre accecipble
           // pous appelez le magasin. dispatch pour dispatcher une action.
@@ -28,7 +27,7 @@ function App() {
     }
     const getLieux = async () => {
 
-      const response = await axios.get('http://localhost:3000/lieuDeTournage')
+      const response = await axios.get(`${process.env.REACT_APP_URL_LIEUX}`)
         .then(function (response) {
           dispatch(addLieuDeTournage(response.data))
         })

@@ -9,7 +9,7 @@ export default function Map() {
     const mapRef: any = useRef(null);
     const arrondissement = useSelector(getAllArrondissement)// recuperation de redux
     const lieuDeTournage = useSelector(getAllLieuDeTournage)// recuperation de redux
-    console.log(lieuDeTournage)
+
     const [viewport, setViewport] = useState({
         width: "90%",
         height: "80vh",

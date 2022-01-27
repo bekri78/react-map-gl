@@ -1,13 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import LabeledValue from "./InterfaceDonnée";
 
-
-// interface
-// qui represente les données 
-const initialState: LabeledValue = {
-    arrondissement: {},
-    lieuDeTournage: {},
-}
+const initialState = {} as LabeledValue;
 
 const arrondissementSlice = createSlice({
     name: "arrondissement",
